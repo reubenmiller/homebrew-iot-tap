@@ -1,8 +1,8 @@
 class Touchie < Formula
   desc "TouchID access to Mac Keychain via CLI"
   homepage "https://github.com/reubenmiller/touchie"
-  url "https://github.com/reubenmiller/touchie/archive/refs/tags/0.0.4.tar.gz"
-  sha256 "3f534dd224486aab18d4df4cee8fe9ab55712466c3863ca1c597fc77ffc33b28"
+  url "https://github.com/reubenmiller/touchie/archive/refs/tags/0.0.5.tar.gz"
+  sha256 "1a97435ab64beffa0b9ad75be5ba88a1304c3b66850657f699e303fef15ab323"
   license "MIT"
 
   bottle do
