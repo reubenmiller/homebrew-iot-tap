@@ -4,6 +4,7 @@ class Touchie < Formula
   url "https://github.com/reubenmiller/touchie/archive/0.0.3.tar.gz"
   sha256 "b6753bfd098598d2a6784d95e15b80509ad644191d6c50e5712dc5d373559dd5"
   license "MIT"
+  depends_on :macos
 
   def install
     system "swiftc", "touchie.swift", "-o", "touchie"
