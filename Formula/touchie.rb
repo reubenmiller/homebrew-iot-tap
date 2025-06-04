@@ -13,6 +13,6 @@ class Touchie < Formula
   end
 
   test do
-    assert_match "no Github token found", shell_output("#{bin}/touchie --help", 255)
+    assert_match "Usage:", shell_output("#{bin}/touchie --help")
   end
 end
