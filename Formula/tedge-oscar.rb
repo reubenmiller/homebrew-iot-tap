@@ -1,9 +1,9 @@
 class TedgeOscar < Formula
   desc "Experiment in using OCI artifacts for managing some thin-edge.io artifacts"
   homepage "https://github.com/reubenmiller/tedge-oscar"
-  url "https://github.com/reubenmiller/tedge-oscar.git",
-      tag:      "v0.0.1",
-      revision: "bf41e5211b784e08ec896435679f7241d1739f9c"
+  url "https://github.com/reubenmiller/touchie/archive/refs/tags/v0.0.1.tar.gz"
+  sha256 "a9edb0211d1bf2fe54eb95dea0ef8723ce7838a48e3c5020558954107b143a35"
+  head "https://github.com/reubenmiller/tedge-oscar.git", branch: "main"
   license "MIT"
 
   bottle do
@@ -21,7 +21,7 @@ class TedgeOscar < Formula
     ldflags = %W[
       -s -w
       -X main.version=v#{version}
-      -X main.commit=#{Utils.git_short_head(length: 7)}
+      -X main.commit=#{tap.user}
       -X main.date=#{time.iso8601}
       -X main.builtBy=homebrew
     ]
