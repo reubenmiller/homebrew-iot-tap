@@ -3,8 +3,8 @@ class TedgeOscar < Formula
   homepage "https://github.com/reubenmiller/tedge-oscar"
   url "https://github.com/reubenmiller/touchie/archive/refs/tags/v0.0.1.tar.gz"
   sha256 "a9edb0211d1bf2fe54eb95dea0ef8723ce7838a48e3c5020558954107b143a35"
-  head "https://github.com/reubenmiller/tedge-oscar.git", branch: "main"
   license "MIT"
+  head "https://github.com/reubenmiller/tedge-oscar.git", branch: "main"
 
   bottle do
     root_url "https://github.com/reubenmiller/homebrew-iot-tap/releases/download/tedge-oscar-0.0.1"
