@@ -6,6 +6,14 @@ class TedgeOscar < Formula
       revision: "bf41e5211b784e08ec896435679f7241d1739f9c"
   license "MIT"
 
+  bottle do
+    root_url "https://github.com/reubenmiller/homebrew-iot-tap/releases/download/tedge-oscar-0.0.1"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "43baf54c8e7c3553c8159ba4002945263162cb0111e911da24e053c7d659e45f"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "6a5756305fe31e5d659e6aa843c9bd98586f9b39ab5b75ba4abf9a17ae2720de"
+    sha256 cellar: :any_skip_relocation, ventura:       "f4210aebb941b7c115dc47858bd3f87d807c4479b96ea95010de6b9d1a5fc1aa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e6e131cf8c60ec7dfe68baae567d7a877d3047a8c40b954a53d986877fdbb9e5"
+  end
+
   depends_on "go" => :build
 
   def install
