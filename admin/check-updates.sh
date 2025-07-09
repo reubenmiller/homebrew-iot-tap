@@ -28,5 +28,6 @@ for file in Formula/*.rb
 do
   echo "Checking formula for updates: ${file}" >&2
   github_repo=$(grep "^ *url" "${file}" | grep -o 'github.com/[^/]*/[^/]*' | cut -d/ -f2-)
+  # shellcheck disable=SC2310
   update_formula "${file}" "${github_repo}" || echo "Failed to check/update formula" >&2
 done
