@@ -7,7 +7,11 @@ update_formula() {
     tag_name=$(gh release view -R "${repo}" --json tagName --jq .tagName)
     source_url="https://github.com/${repo}/archive/refs/tags/${tag_name}.tar.gz"
 
-    SHA256=$(wget -O - "${source_url}" 2>/dev/null | sha256sum - | cut -d' ' -f1)
+    SHA256=$(wget -O - "${source_url}" 2>/dev/null || true | sha256sum - | cut -d' ' -f1)
+    if [ -z "${SHA256}" ]; then
+        echo "Could not get sha256 of the source url. url=${source_url}" >&2
+        return 1
+    fi
 
     echo "file   : ${formula_file}"
     echo "tag    : ${tag_name}"
