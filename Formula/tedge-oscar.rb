@@ -1,8 +1,8 @@
 class TedgeOscar < Formula
   desc "Experiment in using OCI artifacts for managing some thin-edge.io artifacts"
   homepage "https://github.com/reubenmiller/tedge-oscar"
-  url "https://github.com/reubenmiller/tedge-oscar/archive/refs/tags/v0.0.1.tar.gz"
-  sha256 "a9edb0211d1bf2fe54eb95dea0ef8723ce7838a48e3c5020558954107b143a35"
+  url "https://github.com/reubenmiller/tedge-oscar/archive/refs/tags/v0.0.2.tar.gz"
+  sha256 "3f48f65c1811d25a92e2cd7038de5bf172a9dd01a821765c872fd04e6247ca9e"
   license "MIT"
   head "https://github.com/reubenmiller/tedge-oscar.git", branch: "main"
 
