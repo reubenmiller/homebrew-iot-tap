@@ -7,11 +7,11 @@ class TedgeOscar < Formula
   head "https://github.com/reubenmiller/tedge-oscar.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/reubenmiller/homebrew-iot-tap/releases/download/tedge-oscar-0.0.3"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "db378f6c6084ad8c31c429eba8c128b7205898ddcda78825421c9790885f0c9e"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a20d68324954cf10e160ddddf128c7016f0e28caa6f23b6a748157d1f56deab0"
-    sha256 cellar: :any_skip_relocation, ventura:       "45651c15e1d35dc0a763e04f5eab59d44c0139387202c003ef2a384ce56e0f3a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7ed97d08594691a8de051d976488cbb51b71fcbeb6063b2d0d7e8f1ddd16724e"
+    root_url "https://github.com/reubenmiller/homebrew-iot-tap/releases/download/tedge-oscar-0.0.4"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c85293f9dec8601849202c9f7e40a463af244a65eb30a0e13241deb6e1f9ed57"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a9e4395da7b44cfe206c5feb505dd1e3a9bd6a5b080a491c2e92b5c5a32ead86"
+    sha256 cellar: :any_skip_relocation, ventura:       "f0c2b00606b8eacae7493682b62bc16c80b5a919e1419753cf672ff7048b87d5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "21fbb4b67a4d7901e060565b68a2f305967f7b26c7c9c04d375bbdcbf953a659"
   end
 
   depends_on "go" => :build
