@@ -21,12 +21,6 @@ jobs:
       contents: read
       pull-requests: read
     steps:
-      - name: Conditionally remove Homebrew and gem cache
-        if: env.CLEAR_HOMEBREW_CACHE == 'true'
-        run: |
-          echo "Clearing Homebrew and gem cache..."
-          rm -rf ~/.cache/Homebrew
-          rm -rf ~/home/.cache/gem
       - name: Set up Homebrew
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
@@ -39,6 +33,13 @@ jobs:
           path: ${{ steps.set-up-homebrew.outputs.gems-path }}
           key: ${{ matrix.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
           restore-keys: ${{ matrix.os }}-rubygems
+
+      - name: Conditionally remove Homebrew and gem cache
+        if: env.CLEAR_HOMEBREW_CACHE == 'true'
+        run: |
+          echo "Clearing Homebrew and gem cache..."
+          rm -rf ~/.cache/Homebrew
+          rm -rf ~/home/.cache/gem
 
       - run: brew test-bot --only-cleanup-before
 
