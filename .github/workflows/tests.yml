@@ -16,9 +16,9 @@ jobs:
         os:
           # skip linux due to an issue with on the latest homebrew release
           # - ubuntu-22.04
-          - macos-13
           - macos-14
           - macos-15
+          - macos-26
     runs-on: ${{ matrix.os }}
     permissions:
       actions: read
