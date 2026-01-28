@@ -7,10 +7,10 @@ class TedgeOscar < Formula
   head "https://github.com/reubenmiller/tedge-oscar.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/reubenmiller/homebrew-iot-tap/releases/download/tedge-oscar-0.10.0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "052ce80972d893d2c5bdc99f120e7e489eb5ff2ff5dec53f1438ff1eae92fe77"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "fe87e96a41d82c4572f47afce4131fb78f07013e97afa77e6127d0cab403a900"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c9eb1fe991bb3c793a9942c0d7bb1028e5870f3643cf20fe3faf61cef66c2617"
+    root_url "https://github.com/reubenmiller/homebrew-iot-tap/releases/download/tedge-oscar-0.11.0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "37d14ff0fa03221d00418dda11687d1b416a912e3de411c9d244a2a7f812baa1"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "6929a77f121ea205a2c70fc74124bd7bbab328a579fff9c9be327ffe85d903be"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "917d8e922b8c1850cf73fb20754dcbfe8c0b0100d6421d4f81e70436ae777f0a"
   end
 
   depends_on "go" => :build
